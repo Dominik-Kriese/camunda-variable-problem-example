@@ -16,7 +16,7 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_01snd9h</bpmn2:incoming>
       <bpmn2:outgoing>Flow_0g4xnkq</bpmn2:outgoing>
-      <bpmn2:multiInstanceLoopCharacteristics camunda:collection="${instances}" camunda:elementVariable="instance" />
+      <bpmn2:multiInstanceLoopCharacteristics camunda:asyncBefore="true" camunda:collection="${instances}" camunda:elementVariable="instance" />
     </bpmn2:callActivity>
     <bpmn2:sequenceFlow id="Flow_01snd9h" sourceRef="Activity_0hi2o6r" targetRef="Activity_1vldy7l" />
     <bpmn2:serviceTask id="Activity_0hi2o6r" name="Create Variables" camunda:delegateExpression="${createVariablesDelegate}">
@@ -26,20 +26,20 @@
   </bpmn2:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="loanApproval">
+      <bpmndi:BPMNEdge id="Flow_01snd9h_di" bpmnElement="Flow_01snd9h">
+        <di:waypoint x="390" y="122" />
+        <di:waypoint x="480" y="122" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0g4xnkq_di" bpmnElement="Flow_0g4xnkq">
+        <di:waypoint x="580" y="122" />
+        <di:waypoint x="682" y="122" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_1" bpmnElement="SequenceFlow_1" sourceElement="_BPMNShape_StartEvent_3" targetElement="Activity_18gcupw_di">
         <di:waypoint x="206" y="122" />
         <di:waypoint x="290" y="122" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="240" y="157" width="90" height="20" />
         </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0g4xnkq_di" bpmnElement="Flow_0g4xnkq">
-        <di:waypoint x="580" y="122" />
-        <di:waypoint x="682" y="122" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_01snd9h_di" bpmnElement="Flow_01snd9h">
-        <di:waypoint x="390" y="122" />
-        <di:waypoint x="480" y="122" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_3" bpmnElement="StartEvent_1">
         <dc:Bounds x="170" y="104" width="36" height="36" />

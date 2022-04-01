@@ -1,6 +1,5 @@
 package org.camunda.bpm.getstarted.loanapproval.del;
 
-import org.camunda.bpm.engine.RuntimeService;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.springframework.stereotype.Component;
@@ -12,8 +11,8 @@ import java.util.List;
 public class CreateVariablesDelegate implements JavaDelegate {
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
-        var numberOfVariables = 50;
-        var numberOfProcesses = 50;
+        var numberOfVariables = 1500;
+        var numberOfProcesses = 400;
 
         List<String> instances = new ArrayList<>();
         for (int i = 0; i < numberOfProcesses; i++) {
